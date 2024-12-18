@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><center>Time In JS</center></h2>
+    <button onclick="hrti()">Click To Know The Time!</button>
+    <p id="hours"></p>
+    <p id="greet"></p>
+    <script>
+        function hrti()
+        {
+            var time=new Date().getHours();
+             var greeting;
+
+            if (time<12)
+        {
+            greeting="Good Morning!";
+        }
+        else if (time<16)
+        {
+            greeting="Good Afternoon!";
+        }
+        else{
+            greeting="Good Evening!";
+        }
+        document.getElementById("hours").innerHTML="Current Time:" + time;
+        document.getElementById("greet").innerHTML=greeting;
+        }
+    </script>
+</body>
+</html>
